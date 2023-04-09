@@ -39,7 +39,6 @@
   }
   
   header {
-    max-width: 1660px;
     background-image: url(../images/banner-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,10 +57,8 @@
   }
   
   .container-header {
-    width: 1200px;
     margin: 0 auto;
-    padding: 28px 15px 145px 15px;
-    /* margin-bottom: 65px;*/
+   padding: 28px 15px 0 15px;
     z-index: 2;
     position: relative;
   }
@@ -74,7 +71,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 125px;
   }
   
   .menu-list {
@@ -118,11 +114,9 @@ margin: 4px 0;
     font-size: 45px;
     color: #ffffff;
     text-transform: uppercase;
+    padding-top: 125px;
+    padding-bottom: 145px;
   }
-
-  
-
-  
 
    .trends-header {
     font-size: 20px;
@@ -146,7 +140,6 @@ margin: 4px 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1660px;
     margin: 0 auto;
    }
   .trend-box{
@@ -170,7 +163,8 @@ margin: 4px 0;
   }
 
   .img-trend {
-    min-height: 320px;
+    height: 320px;
+    width: 100%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -205,20 +199,22 @@ margin: 4px 0;
 
 .trend-card {
   z-index: 3;
-  margin-bottom: 15px;
+  margin: 15px 20px;
   max-height: 320px;
   border: 3px solid #b59f5b;    
-  padding: 33px; 
-  width: 90%;}
- 
+  padding: 4.5%; 
+  line-height: 24px;
+  flex-grow: 1;
+} 
 
   .trend-name { 
 text-align: left;
+font-size: 20px;
+line-height: 24px;
   }
 
   .trend-name-link{
     text-transform: uppercase;
-    font-size: 20px;
     font-weight: 700;
     color: #ffffff;
 
@@ -266,7 +262,7 @@ text-decoration: underline;
   }
   
   .news-pic {
-    width: 380px;
+    width: 100%;
     display: block;
     margin-right: 30px;
   }
@@ -286,6 +282,7 @@ text-decoration: underline;
   .news-header {
     text-align: left;
     margin-bottom: 35px;
+    line-height: 22px;
   }
   
   .teg-link {
@@ -378,16 +375,13 @@ text-decoration: underline;
   }
   
   .search {
-    margin-top: 60px;
     display: flex;
     width: 100%;
-    margin-bottom: 60px;
   }
   
   .search-field {
     box-sizing: border-box;
     padding-left: 18px;
-    width: 222px;
     height: 47px;
     font-size: 13px;
     border: none;
@@ -403,6 +397,7 @@ text-decoration: underline;
     background-size: 18px;
     background-position: center;
     background-color: #b59f5b;
+    flex-shrink: 0;
   }
 
   .search-btn:hover{
@@ -526,11 +521,11 @@ text-decoration: underline;
 
   
   .our-merch {
-    max-width: 1200px;
     margin: 0 auto;
     /**/
   }
   .merch-wrp {
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     margin: 28px auto 0 auto;
@@ -557,7 +552,7 @@ text-decoration: underline;
   
 
     .product-img {
-      min-height: 205px; 
+height: auto;
       width: 100%;
       z-index: -1;
 position: relative;
@@ -581,10 +576,7 @@ position: relative;
     font-weight: 400;
     outline: 3px solid #b59f5b;
     outline-offset: 20px; 
-    display: flex;
-flex-direction: column;
-flex-grow: 1;  
-flex-shrink: 0;
+    flex-grow: 1;  
 } 
 
   .product-info:hover{
@@ -600,6 +592,7 @@ flex-shrink: 0;
   .product-wrp {
     display: flex;
     justify-content: space-between;
+    align-items: end;
     margin-top: 25px;
   }
   
@@ -623,6 +616,9 @@ flex-shrink: 0;
     font-size: 14px;
     font-weight: 700;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .shop:hover{
@@ -800,32 +796,207 @@ opacity: 0.6;
     background-color: #323232;
   }
   */
+  @media (max-width: 1200px) and (orientation: landscape)  {
 
-@media (max-width: 768px)  {
+    header {
+      background-image: url(../images/banner-bg-tablet.jpg);
+    }
+   
+    
+    .container-header {
+      max-width: 1200px;
+      padding-top: 40px;
+    }
+    
+    .logo {
+      width: 160px;
+      position: absolute;
+      top: 40px;
+      left: 35px;
+    }
+
+    .burger-btn{
+      position: absolute;
+      top: 25px;
+      right: 15px;
+       display: block;
+    }
+  
+    .burger{
+          width: 20px; 
+          height: 3px;
+          display: block;
+          background-color: #ffffff;  
+          margin: 4px 0;
+    }
+    .menu-list {
+      display: none;
+    }
+    .our-merch {
+      max-width: 120px;
+      margin: 0 auto;
+      /**/
+    }
+
+    /*
+    .merch-wrp {
+    flex-wrap: wrap;
+    margin: 28px 10px 0 10px;
+    }
+    
+    .product-card {
+      width: 41%;
+      margin-bottom: 45px;
+  }
+*/
+  
+  .title {
+    max-width: 615px;
+    font-size: 40px; 
+    padding-top: 140px;
+    padding-bottom: 125px;
+   }
+   
+    .trends-header {
+     font-size: 18px;
+     margin-bottom: 18px;
+    }
+ 
+ 
+    .img-trend {
+      height: 245px;
+     
+    }
+  
+    .trend-name{
+      font-size: 17px;
+      line-height: 22px;
+    }
+  
+    .trend-link {
+      font-size: 14px;
+    }
+    
+  
+    .page {
+      max-width: 1200px;
+      padding: 0 30px;
+    }
+    
+    main {
+      width: 56%;
+    }
+  
+    .news {
+  flex-direction: column; 
+   }
+  
+    .news:nth-child(n + 2) { 
+      margin-top: 65px;
+    }
+   
+    
+    .tegs-list {
+    
+      margin-top: 15px;
+    }
+    
+    .news-header {
+      text-align: left;
+      margin-bottom: 35px;
+    }
+   
+    .title-news-header {
+      font-size: 17px;
+      line-height: 22px;
+    }
+    
+    .news-content {
+      margin-top: 35px;
+    }
+    
+    aside {
+      width: 38.5%;
+      margin-left: 35px;
+    }
+    
+    
+    .our-merch {
+      max-width: 1200px;
+      margin: 0 auto;
+      /**/
+    }
+    .merch-wrp {
+    flex-wrap: wrap;
+    width: 90%;
+    }
+    
+    .product-card {
+      width: 41%;
+      margin-bottom: 45px;
+      display: flex;
+  
+  }
+  .container-footer {
+    max-width: 1200px;
+  }
+  
+  }
+
+  @media (max-width: 1200px) and (orientation: landscape){
+    .trends-wrp{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto;
+     }
+    .trend-box{
+      width: 24.8%;
+      position: relative;
+    }}
+
+    @media (max-width: 1200px) and (orientation: portrait), (max-width: 640px) and (orientation: landscape){
+
+
+.trends-wrp{
+  flex-wrap: wrap;
+
+ }
+.trend-box{
+  width: 49.7%;
+  margin-bottom: 3px;
+} 
+
+}
+
+
+
+
+@media (max-width: 1200px) and (orientation: portrait)  {
+
 
   header {
-    max-width: 768px;
     background-image: url(../images/banner-bg-tablet.jpg);
-   max-height: 390px;
   }
  
   
   .container-header {
-    width: 768px;
-    position: relative;
+    max-width: 1200px;
+    padding-top: 40px;
   }
   
   .logo {
-    width: 158px;
+    width: 160px;
     position: absolute;
-    top: 50px;
+    top: 40px;
     left: 35px;
   }
  
   .burger-btn{
-    margin-top: 22px;
-    margin-right: 15px;
-    display: block;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+     display: block;
   }
 
   .burger{
@@ -840,8 +1011,10 @@ opacity: 0.6;
   }
   
   .title {
-    width: 605px;
+   max-width: 615px;
    font-size: 40px; 
+   padding-top: 140px;
+   padding-bottom: 125px;
   }
   
    .trends-header {
@@ -850,22 +1023,16 @@ opacity: 0.6;
    }
 
   
-   .trends-wrp{
-    flex-wrap: wrap;
-  
-   }
-  .trend-box{
-    width: 49.7%;
-    margin-bottom: 3px;
-  } 
+   
 
   .img-trend {
-    min-height: 245px;
+    height: 245px;
    
   }
 
-  .trend-name-link{
+  .trend-name{
     font-size: 17px;
+    line-height: 22px;
   }
 
   .trend-link {
@@ -874,8 +1041,8 @@ opacity: 0.6;
   
 
   .page {
-    max-width: 700px;
-    padding: 0px;
+    max-width: 1200px;
+    padding: 0 30px;
   }
   
   main {
@@ -911,18 +1078,19 @@ flex-direction: column;
   }
   
   aside {
-    width: 39%;
+    width: 38%;
+    margin-left: 35px;
   }
   
   
   .our-merch {
-    max-width: 700px;
+    max-width: 1200px;
     margin: 0 auto;
-    /**/
+  
   }
   .merch-wrp {
   flex-wrap: wrap;
-  margin: 28px 10px 0 10px;
+  width: 90%;
   }
   
   .product-card {
@@ -930,8 +1098,174 @@ flex-direction: column;
     margin-bottom: 45px;
 
 }
-.container-footer {
-  max-width: 768px;
+
+.product-info{
+  width: 100%;
 }
 
+.container-footer {
+  max-width: 1200px;
+}
+
+}
+
+
+
+
+@media (max-width: 640px) and (orientation: portrait) {
+
+  header {
+    background-image: url(../images/banner-mobile.jpg);
+  }
+ 
+  
+  .container-header {
+    max-width: 640px;
+    position: relative;
+    padding: 28px 15px 125px 15px;
+  }
+  
+  .logo {
+    width: 270px;
+    position: absolute;
+    top: 220px;
+  }
+ 
+  .burger-btn{
+    margin-top: 30px;
+    margin-right: 15px;
+    display: block;
+  }
+
+  .burger{
+        width: 20px; 
+        height: 3px;
+        display: block;
+        background-color: #ffffff;  
+        margin: 4px 0;
+  }
+  .menu-list {
+    display: none;
+  }
+  
+  .title {
+    width: 328px;
+   font-size: 26px; 
+   padding-bottom: 220px;
+   padding-top: 330px;
+  }
+  
+   .trends-header {
+    font-size: 16px;
+    margin-bottom: 25px;
+   }
+
+  
+   .trends-wrp{
+    flex-wrap: wrap;
+  
+   }
+  .trend-box{
+    width: 100%;
+    margin-bottom: 3px;
+  } 
+
+  .img-trend {
+    min-height: 230px;
+   
+  }
+
+  .trend-name{
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .trend-link {
+    font-size: 14px;
+  }
+  
+
+  .page {
+    max-width: 640px;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+ 
+
+  .news:nth-child(n + 2) { 
+    margin-top: 20px;
+  }
+ 
+  .news-box::after{
+    content: "";
+    display: block;
+    position: relative;
+    margin: 20px auto 0 auto;
+    width: 100%;
+    height: 3px;
+    background: #eeeeee;
+  }
+  .tegs-list {
+  
+    margin-top: 15px;
+  }
+  
+  .news-header {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+ 
+  .title-news-header {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .news-content {
+    margin-top: 20px;
+  }
+  
+  aside {
+    width: 100%;
+    margin-top: 45px;
+    margin-left: 0;
+  }
+
+  section {
+    margin-bottom: 45px;
+  }
+  .search {
+    display: flex;
+    width: 100%;
+    margin-bottom: 45px;
+  }
+  
+  
+  .our-merch {
+    max-width: 640px;
+    margin: 0 auto;
+    /**/
+  }
+  .merch-wrp {
+    flex-direction: column;
+    width: 90%;
+  }
+  
+  .product-card {
+    width: 95%;
+    margin-bottom: 45px;
+
+}
+
+.product-info{
+  width: 100%;
+}
+
+.container-footer {
+  max-width: 640px;
+}
 }

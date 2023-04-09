@@ -11,9 +11,10 @@
     <header>
       <div class="container-header">
         <div class="top">
+          <div class="logo">
           <a href="#0" class="logo-link">
-            <img src="./svg/noemi-logo.svg" alt="логотип" class="logo">
-          </a>
+            <img src="./svg/noemi-logo.svg" alt="логотип" class="">
+          </a></div>
           <nav>
             <ul class="menu-list">
     
@@ -38,14 +39,15 @@
               </li>
             </ul>
           </nav>
-
+        </div>
+          <a href="#0">
           <div class="burger-btn">
             <div class="burger"></div>
             <div class="burger"></div>
             <div class="burger"></div>
           </div>
-
-        </div>
+        
+      </a>
         <h1 class="title">блог о творчестве, спорте, и образе жизни</h1>
       </div>
     </header>
@@ -445,13 +447,12 @@
     
     
     <article class="product-card">
-      <a href="#0"><img src="images/shop-item-desk1.jpg" alt="подушка" class="product-img"></a>
- <!-- <picture class="product-img">
-<source media="(min-width: 1200px)" srcset="">
-<source media="(max-width: 768px)" srcset="">
-<source media="(max-width: 360px)" srcset="">
+    <!--  <a href="#0"><img src="images/shop-item-desk1.jpg" alt="подушка" class="product-img"></a>-->
+ <picture class="product-img">
+<source media="(max-width: 1200px)" srcset="images/shop-item-tablet1.jpg">
+<source media="(max-width: 640px)" srcset="images/shop-item-mobile1">
    <img src="./images/shop-item-desk1.jpg" alt="подушка на диван">
-</picture>-->
+</picture>
     <div class="product-info-wrp">
       <h4 class="product-header">
         <a class="product-header-link" href="#0">подушка на диван</a>
@@ -459,19 +460,25 @@
   <p class="product-info">
     Набор из двух подушек с модными принтами. Видео о создании <a href="#0" class="info-link">здесь</a>.</p>
     <div class="product-wrp">
+
       <div class="product-price">
         <p class="product-price-old">1000р</p> 
         <p class="product-price-new">800р</p>
       </div>
       
-      <button type="submit" class="shop" alt="в магазин">в магазин</button>
+      <div  class="shop"><a>в магазин</a></div>
+      
     </div>
     </div>
     
       </article>
       <article class="product-card">
-        <a href="#0"><img src="images/shop-item-desk2.jpg" alt="подушка" class="product-img"></a>
-    
+       <!-- <a href="#0"><img src="images/shop-item-desk2.jpg" alt="подушка" class="product-img"></a>-->
+        <picture class="product-img">
+          <source media="(max-width: 1200px)" srcset="images/shop-item-tablet2.jpg">
+          <source media="(max-width: 640px)" srcset="images/shop-item-mobile2">
+             <img src="./images/shop-item-desk2.jpg" alt="игрушка">
+          </picture>
       <div class="product-info-wrp">
         <h4 class="product-header">
           <a class="product-header-link" href="#0">кукла «Зайчик»</a>
@@ -480,20 +487,21 @@
       Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0" class="info-link">весенняя серия постов</a> в блоге и несколько подкастов.</p>
       <div class="product-wrp">
         <div class="product-price">
-          
-          <p class="product-price-new">3500р</p>
+           <p class="product-price-new">3500р</p>
         </div>
-        <div class="btn-shop">
-        <button type="submit" class="shop" alt="в магазин">в магазин</button>
-      </div>
+        <div  class="shop"><a>в магазин</a></div> 
       </div>
       </div>
       
         </article>
 
         <article class="product-card">
-          <a href="#0"><img src="images/shop-item-desk3.jpg" alt="подушка" class="product-img"></a>
-      
+         <!-- <a href="#0"><img src="images/shop-item-desk3.jpg" alt="подушка" class="product-img"></a>-->
+          <picture class="product-img">
+            <source media="(max-width: 1200px)" srcset="images/shop-item-tablet3.jpg">
+            <source media="(max-width: 640px)" srcset="images/shop-item-mobile3">
+               <img src="./images/shop-item-desk3.jpg" alt="рамка">
+            </picture>
         <div class="product-info-wrp">
           <h4 class="product-header">
             <a class="product-header-link" href="#0">шестиугольная рамка</a>
@@ -505,8 +513,8 @@
             <p class="product-price-old">500р</p> 
             <p class="product-price-new">400р</p>
           </div>
-          
-          <button type="submit" class="shop" alt="в магазин">в магазин</button>
+          <div  class="shop"><a>в магазин</a></div>
+
         </div>
         </div>
         
