@@ -35,13 +35,13 @@ h3,
 h2 {
   text-transform: uppercase;
   text-align: center;
-  /* margin-bottom: 45px;*/
 }
 
 header {
   background-image: url(../images/banner-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   position: relative;
   margin: 0 auto 65px auto;
 }
@@ -156,10 +156,6 @@ header::after {
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-.trend-box:nth-child(n + 1):nth-child(-n + 3) {
-  /*  margin-right: 3px;*/
 }
 
 .img-trend {
@@ -609,6 +605,7 @@ sup {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .shop:hover {
@@ -678,6 +675,9 @@ sup {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 5;
 }
 .popup {
   font-size: 13px;
@@ -685,7 +685,9 @@ sup {
   max-width: 390px;
   background-color: #ffffff;
   padding: 55px 30px;
+  position: relative;
 }
+
 .title-pop {
   font-size: 20px;
   line-height: 29px;
@@ -703,7 +705,7 @@ sup {
 .select {
   box-sizing: border-box;
   padding-left: 18px;
-  width: 330px;
+  width: 100%;
   height: 40px;
   font-size: 13px;
   border: none;
@@ -713,6 +715,7 @@ sup {
   margin-bottom: 33px;
   margin-top: 12px;
   outline: none;
+  cursor: pointer;
 }
 
 .select:focus {
@@ -721,7 +724,6 @@ sup {
 
 .select-wrp {
   position: relative;
-  width: 330px;
 }
 .select-wrp:before {
   content: "";
@@ -767,7 +769,7 @@ fieldset {
 .text-area {
   min-height: 130px;
   resize: none;
-  width: 330px;
+  width: 100%;
   background-color: #f4f7f6;
   outline: none;
   border: none;
@@ -776,7 +778,7 @@ fieldset {
 }
 
 .send {
-  width: 330px;
+  width: 100%;
   min-height: 50px;
   background-color: #b59f5b;
   text-transform: uppercase;
@@ -788,6 +790,24 @@ fieldset {
 
 .send:hover {
   background-color: #323232;
+}
+
+.btn-close {
+  width: 0;
+  height: 0;
+  z-index: -1;
+  position: absolute;
+}
+.btn-close-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -27px;
+  right: 0;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) and (orientation: landscape) {
@@ -859,6 +879,7 @@ fieldset {
   .page {
     max-width: 1200px;
     padding: 0 30px;
+    margin-bottom: 65px;
   }
 
   main {
@@ -932,10 +953,23 @@ fieldset {
     width: 24.8%;
     position: relative;
   }
-}
+  .news-box {
+    width: 100%;
+  }
 
-@media (max-width: 1200px) and (orientation: portrait),
-  (max-width: 640px) and (orientation: landscape) {
+  .news:nth-child(n + 2)::before {
+    content: "";
+    display: block;
+    position: relative;
+    margin: 0 auto 40px auto;
+    width: 100%;
+    height: 3px;
+    background: #eeeeee;
+  }
+
+  .news:nth-child(n + 2) {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 1200px) and (orientation: portrait) {
@@ -1009,6 +1043,7 @@ fieldset {
   .page {
     max-width: 1200px;
     padding: 0 30px;
+    margin-bottom: 65px;
   }
 
   main {
@@ -1019,8 +1054,22 @@ fieldset {
     flex-direction: column;
   }
 
+  .news-box {
+    width: 100%;
+  }
+
+  .news:nth-child(n + 2)::before {
+    content: "";
+    display: block;
+    position: relative;
+    margin: 0 auto 40px auto;
+    width: 100%;
+    height: 3px;
+    background: #eeeeee;
+  }
+
   .news:nth-child(n + 2) {
-    margin-top: 65px;
+    margin-top: 20px;
   }
 
   .tegs-list {
@@ -1160,11 +1209,12 @@ fieldset {
     content: "";
     display: block;
     position: relative;
-    margin: 20px auto 0 auto;
+    margin: 23px auto 30px auto;
     width: 100%;
     height: 3px;
     background: #eeeeee;
   }
+
   .tegs-list {
     margin-top: 15px;
   }
@@ -1221,6 +1271,10 @@ fieldset {
   .container-footer {
     max-width: 640px;
   }
+
+  .popup {
+    width: 330px;
+  }
 }
 
 @media (max-width: 640px) and (orientation: landscape) {
@@ -1247,5 +1301,11 @@ fieldset {
     font-size: 26px;
     padding-bottom: 215px;
     padding-top: 45px;
+  }
+
+  .popup-wrp {
+    padding-top: 30px;
+    overflow-y: auto;
+    align-items: flex-start;
   }
 }
