@@ -561,11 +561,13 @@ sup {
 }
 
 .product-info-wrp {
+  padding-top: 20px;
   font-size: 15px;
   font-weight: 400;
   outline: 3px solid #b59f5b;
   outline-offset: 20px;
   flex-grow: 1;
+  margin-top: -15px;
 }
 
 .info-link:hover {
@@ -939,9 +941,7 @@ fieldset {
   .container-footer {
     max-width: 1200px;
   }
-}
 
-@media (max-width: 1200px) and (orientation: landscape) {
   .trends-wrp {
     display: flex;
     justify-content: space-between;
@@ -957,18 +957,17 @@ fieldset {
     width: 100%;
   }
 
-  .news:nth-child(n + 2)::before {
-    content: "";
-    display: block;
-    position: relative;
-    margin: 0 auto 40px auto;
-    width: 100%;
-    height: 3px;
-    background: #eeeeee;
+  .news {
+    border-bottom: #eeeeee 3px solid;
+    padding-bottom: 20px;
+  }
+
+  .news-end {
+    border-bottom: none;
   }
 
   .news:nth-child(n + 2) {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 
@@ -1058,18 +1057,17 @@ fieldset {
     width: 100%;
   }
 
-  .news:nth-child(n + 2)::before {
-    content: "";
-    display: block;
-    position: relative;
-    margin: 0 auto 40px auto;
-    width: 100%;
-    height: 3px;
-    background: #eeeeee;
+  .news {
+    border-bottom: #eeeeee 3px solid;
+    padding-bottom: 20px;
+  }
+
+  .news-end {
+    border-bottom: none;
   }
 
   .news:nth-child(n + 2) {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .tegs-list {
@@ -1198,21 +1196,20 @@ fieldset {
   }
 
   .news:nth-child(n + 2) {
-    margin-top: 20px;
+    margin-top: 35px;
   }
 
   .news-box {
     width: 100%;
   }
 
-  .news-box::after {
-    content: "";
-    display: block;
-    position: relative;
-    margin: 23px auto 30px auto;
-    width: 100%;
-    height: 3px;
-    background: #eeeeee;
+  .news {
+    border-bottom: #eeeeee 3px solid;
+    padding-bottom: 20px;
+  }
+
+  .news-end {
+    border-bottom: none;
   }
 
   .tegs-list {
@@ -1301,6 +1298,10 @@ fieldset {
     font-size: 26px;
     padding-bottom: 215px;
     padding-top: 45px;
+  }
+
+  .news:nth-child(n + 2) {
+    margin-top: 35px;
   }
 
   .popup-wrp {
